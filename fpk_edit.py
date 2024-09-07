@@ -98,9 +98,9 @@ def load_csv_values(scene):
         if len(data) > 34:
             scene.fpk_pos_x = float(data[34])
         if len(data) > 35:
-            scene.fpk_pos_z = float(data[35])
+            scene.fpk_pos_y = float(data[35])
         if len(data) > 36:
-            scene.fpk_pos_y = float(data[36])
+            scene.fpk_pos_z = float(data[36])
         if len(data) > 38:
             scene.fpk_angle = float(data[38])
         
@@ -200,8 +200,8 @@ def write_csv_values(scene):
         
         # Position and Direction
         data[34] = str(scene.fpk_pos_x)
-        data[35] = str(scene.fpk_pos_z)
-        data[36] = str(scene.fpk_pos_y)
+        data[35] = str(scene.fpk_pos_y)
+        data[36] = str(scene.fpk_pos_z)
         data[38] = str(scene.fpk_angle)
         
         # Player Stats
